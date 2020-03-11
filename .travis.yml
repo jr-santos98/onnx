@@ -1,7 +1,4 @@
-#Testando
 language: generic
-os: linux
-arch: ppc64le
 
 matrix:
   include:
@@ -15,6 +12,18 @@ matrix:
       env: PYTHON_VERSION=python3 ONNX_ML=0
       language: python
       python: "3.6"
+    - os: linux
+      arch: ppc64le
+      sudo: required
+      env: PYTHON_VERSION=python2 ONNX_ML=0
+      language: python
+      python: "2.7"
+    - os: linux
+      arch: ppc64le
+      sudo: required
+      env: PYTHON_VERSION=python3 ONNX_ML=0
+      language: python
+      python: "3.6"
     - os: osx
       osx_image: xcode9.3
       env: PYTHON_VERSION=python2 ONNX_ML=0
@@ -31,6 +40,18 @@ matrix:
       env: PYTHON_VERSION=python3
       language: python
       python: "3.6"
+    - os: linux
+      arch: ppc64le
+      sudo: required
+      env: PYTHON_VERSION=python2
+      language: python
+      python: "2.7"
+    - os: linux
+      arch: ppc64le
+      sudo: required
+      env: PYTHON_VERSION=python3
+      language: python
+      python: "3.6"
     - os: osx
       osx_image: xcode9.3
       env: PYTHON_VERSION=python2
@@ -38,6 +59,12 @@ matrix:
       osx_image: xcode9.3
       env: PYTHON_VERSION=python3
     - os: linux
+      sudo: required
+      env: PYTHON_VERSION=python2 LITE=1
+      language: python
+      python: "2.7"
+    - os: linux
+      arch: ppc64le
       sudo: required
       env: PYTHON_VERSION=python2 LITE=1
       language: python
