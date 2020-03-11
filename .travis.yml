@@ -1,4 +1,6 @@
 language: generic
+os: linux
+arch: ppc64le
 
 matrix:
   include:
